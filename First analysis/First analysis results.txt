@@ -1,0 +1,60 @@
+#### BUILDING ------------------------------------
+
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    0    1    2
+         0 1311   11   12
+         1    0 1293    0
+         2    0    0 2357
+
+Overall Statistics
+                                          
+               Accuracy : 0.9954          
+                 95% CI : (0.9931, 0.9971)
+    No Information Rate : 0.4753          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.9928            
+
+#### FLOOR ----------------------------------------
+
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    0    1    2    3    4
+         0 1107   29    5   12    0
+         1   28 1203   27    2    0
+         2    1   17 1011   32    1
+         3    0    3   42 1185    2
+         4    0    0    0    3  274
+
+Overall Statistics
+                                          
+               Accuracy : 0.9591          
+                 95% CI : (0.9532, 0.9644)
+    No Information Rate : 0.2512          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.9471 
+				  
+#### LONGITUDE --------------------------------------
+
+k  RMSE      Rsquared   MAE     
+  5  10.41821  0.9928250  4.445043
+
+#### LATITUDE --------------------------------------
+
+k  RMSE      Rsquared   MAE     
+  5  7.627156  0.9868492  3.633696
+
+
+
+
+
+
+
+
+
+
+
