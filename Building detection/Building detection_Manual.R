@@ -20,9 +20,12 @@ library(FactoMineR)
 library(factoextra)
 library(corrplot)
 
-# Importing data ----------------------------------------------------------
+# Import data -------------------------------------------------------------
 
 wifi_training <- readRDS("./Module 3 - Task 3/New Data/wifi_training_pp.rds")
+wifi_validation <- readRDS("./Module 3 - Task 3/New Data/wifi_validation_pp.rds")
+
+wifi_training_nodup <- readRDS("./Module 3 - Task 3/New Data/wifi_training_pp_nodup.rds")
 
 # Creation of table waps vs building --------------------------------------
 # Create the table waps vs building based on training
