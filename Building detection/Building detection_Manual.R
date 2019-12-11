@@ -24,29 +24,6 @@ library(corrplot)
 
 wifi_training <- readRDS("./Module 3 - Task 3/New Data/wifi_training_pp.rds")
 
-# replace_by_building <- function(df){
-#   i <- 1
-#   while(i <= 19300){
-#     i2 <- 1
-#     while(i2 <= 404){
-#       if(df[i,i2] != -110){
-#         df[i,i2] <- as.numeric(df$BUILDINGID[i]) -1
-#       }
-#       else{
-#         df[i,i2] <- -1
-#       }
-#       i2 <- i2+1
-#     }
-#     print(i)
-#     i <- i+1
-#   }
-#   return(df)
-# }
-# 
-# wifi_training <- replace_by_building(wifi_training)
-# saveRDS(wifi_training,"./Module 3 - Task 3/New Data/wifi_training_pp_allbuildings.rds")
-
-
 # Creation of table waps vs building --------------------------------------
 # Create the table waps vs building based on training
 wifi_training_nodup %>% 
@@ -59,12 +36,6 @@ wifi_training_nodup %>%
   pivot_wider(names_from = BUILDINGID, values_from = count) %>% 
   mutate(Building = as.numeric(colnames(.)[apply(.,1,which.max)])) %>% 
   select(WAP, Building) -> wap_vs_b
-
-# scl_nb_per_wap_per_b <- as_tibble(scale(nb_per_wap_per_b[2:4]))
-# set.seed(123)
-# dist_mat <- dist(scl_nb_per_wap_per_b, method = 'euclidean')
-# hclust_avg <- hclust(dist_mat, method = 'average')
-# plot(hclust_avg)
 
 
 # Algorithm to detect the building ----------------------------------------
