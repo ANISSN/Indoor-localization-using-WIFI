@@ -1,6 +1,6 @@
 # ###########################################################################-
 # GOAL: Wifi Locationing
-# DESCRIPTION: First analysis
+# DESCRIPTION: Building detection
 # AUTHOR: Aniss N
 # ###########################################################################-
 
@@ -42,7 +42,7 @@ wifi_training_nodup %>%
 
 
 # Algorithm to detect the building ----------------------------------------
-wifi_tsample <- wifi_validation
+wifi_tsample <- wifi_training_nodup
 
 # Calculation of ratio of detected waps
 wifi_tsample %>% 
